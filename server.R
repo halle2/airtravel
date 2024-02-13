@@ -12,7 +12,7 @@ travelstats <- travelstats %>%
   rename (Ontime.Prop= Ontime...., 
           Delayed.Prop = Delayed...., 
           Cancelled.Prop = Cancelled....) 
-travelstatistics <- read.csv("data/airstats_mod.csv",header = TRUE, stringsAsFactors=FALSE)
+travelstatistics <- read.csv("data/departstats_mod.csv",header = TRUE, stringsAsFactors=FALSE)
 dataset <- travelstatistics[-c(2, 4, 6,7), ]
 passengermod<- read.csv("data/ustraveltrends.csv", header = TRUE, stringsAsFactors=FALSE)
 passenger_prop <- passengermod[-c(1,3,5),]
