@@ -187,7 +187,7 @@ Although there were still over 50,000 cases of Covid in the US, the public risk 
      tags$p("3. Furthermore, despite the seemingly overwhelming number of travel plans disrupted due to flight delays and cancellations,
               the overall change in on-time performance up until May is relatively slight when compared to pre-pandemic numbers. 
               Looking at the 'Airtime Statistics' pie charts, we can see that there has been a 2.8% decrease in on-time departures,
-          a 2.2% increase in delayed flights and roughly 0.5% increase in cancelled flights in comparison to 2019.
+          a 2.2% increase in delayed flights, and a roughly 0.5% increase in cancelled flights in comparison to 2019.
            Considering the increase in air travel demand and obstacles caused by staffing shortages, air travel in 2022 as of May has not changed as drastically as many believe.")
        
      

@@ -5,19 +5,19 @@ library(plotly)
 library(ggplot2)
 library(data.table)
 
-tsa_numbers_df <- read.csv("tsanumbers.csv", header = TRUE, stringsAsFactors=FALSE)
+tsa_numbers_df <- read.csv("data/tsanumbers.csv", header = TRUE, stringsAsFactors=FALSE)
 tsa2 <- tsa_numbers_df[order(as.Date(tsa_numbers_df$Date, format="%m/%d", rev(tsa_numbers_df$X2021))),]
-travelstats <- read.csv("airtravel.csv",header = TRUE, stringsAsFactors=FALSE)
+travelstats <- read.csv("data/airtravel.csv",header = TRUE, stringsAsFactors=FALSE)
 
-travelstatistics <- read.csv("departstats_mod.csv",header = TRUE, stringsAsFactors=FALSE)
+travelstatistics <- read.csv("data/departstats_mod.csv",header = TRUE, stringsAsFactors=FALSE)
 travelstatistics[, 2:5] <- lapply(travelstatistics[, 2:5], function(x) as.numeric(gsub(",", "", x)))
 
 dataset <- travelstatistics[c(1, 3, 5), ] 
 
-passengermod<- read.csv("ustraveltrends.csv", header = TRUE, stringsAsFactors=FALSE)
+passengermod<- read.csv("data/ustraveltrends.csv", header = TRUE, stringsAsFactors=FALSE)
 passenger_prop <- passengermod[-c(1,3,5),]
 passenger_num <- passengermod[-c(2,4,5),]
-covid_numbers_df <- read.csv("covid_cases.csv",header = TRUE, stringsAsFactors = FALSE)
+covid_numbers_df <- read.csv("data/covid_cases.csv",header = TRUE, stringsAsFactors = FALSE)
 covid_numbers_df <- covid_numbers_df%>%
   mutate(Dates = as.Date(Date,format = "%B %d %Y"))%>%
   select(Dates,X7.Day.Moving.Avg)
