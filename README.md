@@ -2,7 +2,7 @@
 
 Given how many people are traveling this summer, I decided to center my project around Covid’s impact on the travel industry and the attitude of the public throughout the pandemic. Social media has declared that air travel is worse than it was before the pandemic, and I’d like to explore how air travel trends have changed throughout the last several years. I would like to identify and visualize the different trends in air travel in the US pre- and post- Covid.
 
-**Three questions we'd like to explore are:**
+**Three questions I'd like to explore are:**
 
 1. How have carriers been affected by the increased demand for travel (cancellations and delays due to staffing issues)? Has there been an increase in flight cancellations/delays since air travel opened back up?
 
