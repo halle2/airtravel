@@ -7,10 +7,13 @@ library(data.table)
 
 tsa_numbers_df <- read.csv("tsanumbers.csv", header = TRUE, stringsAsFactors=FALSE)
 tsa2 <- tsa_numbers_df[order(as.Date(tsa_numbers_df$Date, format="%m/%d", rev(tsa_numbers_df$X2021))),]
-travelstats <- read.csv("departstats_mod.csv",header = TRUE, stringsAsFactors=FALSE)
+travelstats <- read.csv("airtravel.csv",header = TRUE, stringsAsFactors=FALSE)
 
-travelstatistics <- read.csv("airtravel.csv",header = TRUE, stringsAsFactors=FALSE)
-dataset <- travelstatistics[-c(2, 4, 6,7), ]
+travelstatistics <- read.csv("departstats_mod.csv",header = TRUE, stringsAsFactors=FALSE)
+travelstatistics[, 2:5] <- lapply(travelstatistics[, 2:5], function(x) as.numeric(gsub(",", "", x)))
+
+dataset <- travelstatistics[c(1, 3, 5), ] 
+
 passengermod<- read.csv("ustraveltrends.csv", header = TRUE, stringsAsFactors=FALSE)
 passenger_prop <- passengermod[-c(1,3,5),]
 passenger_num <- passengermod[-c(2,4,5),]
@@ -110,6 +113,6 @@ shinyServer(function(input, output) {
     }
   })
   output$info <- renderTable({
-    travelstats[7:10,]
+    travelstatistics[c(1,3,5,7),]
   })
 })
