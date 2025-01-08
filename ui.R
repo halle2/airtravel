@@ -64,12 +64,12 @@ tags$style(HTML(type="text/css",
               tags$p("From the CDC website, this dataset tracks the weekly number of people who tested positive for Covid-19 in the US."),
               tags$a(href="https://www.transtats.bts.gov/Data_Elements.aspx?Data=3", 
                      "Domestic vs International"),
-              tags$p("This dataset is also from the Bureau of Transportation Statistics website, as part of USDOT. Due to confidentiality agreements for individual routes, data from the last three months (06/2022-08/2022) is currently withheld. 
+              tags$p("This dataset is from the Bureau of Transportation Statistics website, as part of USDOT. Due to confidentiality agreements for individual routes, data from the last three months (06/2022-08/2022) is currently withheld. 
                      The data covers the count and proportion of passengers travelling international and domestic in the US."),
               tags$a(href="https://www.transtats.bts.gov/homedrillchart.asp", 
-                     "Arrival Statistics"),
+                     "Departure Statistics"),
               tags$p("This dataset is also from the Bureau of Transportation Statistics website, and currently does not include information past May 2022. The information is based on submitted data by reporting carriers.
-                     The data covers ontime arrivals, delays, cancellations, and total flight operations per year in both numbers and percentages.
+                     The data covers ontime departures, delays, cancellations, and total flight operations per year in both numbers and percentages.
                      A flight is considered delayed if it arrived or departed at least 15 minutes later than the scheduled arrival or departure time.
                      The major carriers that are part of this report are Alaskan Airlines, American West, American Airlines, Continental Airlines, Delta Air Lines, Northwest Airlines, Southwest Airlines
                      Trans World Airways, United Airlines, and US Airways.
@@ -159,9 +159,14 @@ tags$style(HTML(type="text/css",
       tags$h3("Further Questions to Consider"),
       tags$p("How have staffing numbers changed over the pandemic? Which sector has been most affected? How has this affected practices in the travel industry?"),
        tags$p("How have international travel trends changed and how does that compare to the US?"), 
-      tags$p("Which airports have the most traffic?")
+      tags$p("Which airports have the most traffic?"),
+      tags$h3(""),
+      tags$img(src = "tromso.png",
+               width = "100%", height = "100%"),
+      tags$p("Tromso, Norway"),
      ),
      mainPanel(
+       
        tags$h3("Takeaways"),
        tags$p(""),
      tags$p("1. With the rise of Covid cases came the decline of air travel as travel restrictions and lockdowns greatly reduced travel demand.
@@ -170,8 +175,7 @@ tags$style(HTML(type="text/css",
             Additionally, the bar charts show that there was a decrease in international travel during 2020 and 2021, and an  increase in 2022.
             Though up-to-date domestic and international statistics have not been released yet, our current data suggests that the proportion of domestic and international travel look to be approaching 2019 statistics (roughly 12% international and 88% domestic). "),
      
-     tags$p("
-2. By looking at the trends in Covid cases and travel numbers, we can examine patterns in travel behavior, positive cases, and risk perception throughout the pandemic. 
+     tags$p("2. By looking at the trends in Covid cases and travel numbers, we can examine patterns in travel behavior, positive cases, and risk perception throughout the pandemic. 
 From our graphs, we can see that people tend to travel more during breaks and holidays (regardless of Covid rates), and this is usually followed by a spike in Covid cases the weeks after.
 The US lifted its international entry travel ban in November 2021, which was followed by a spike in January 2022, peaking at 810,878 cases on January 15th. 
 Despite warnings of the highly contagious Omicron variant, the number of passengers traveling continued to stay above 1.5 million per day during the holiday season.
@@ -182,14 +186,11 @@ Although there were still over 50,000 cases of Covid in the US, the public risk 
      
      tags$p("3. Furthermore, despite the seemingly overwhelming number of travel plans disrupted due to flight delays and cancellations,
               the overall change in on-time performance up until May is relatively slight when compared to pre-pandemic numbers. 
-              Looking at the 'Airtime Statistics' pie charts, we can see that there has been a 2% decrease in on-time flights,
-          a 2% increase in delayed flights and 1% increase in cancelled flights in comparison to 2019.
-           Considering the increase in air travel demand and obstacles caused by staffing shortages, air travel in 2022 as of May has not changed as drastically as many believe."),
+              Looking at the 'Airtime Statistics' pie charts, we can see that there has been a 2.8% decrease in on-time departures,
+          a 2.2% increase in delayed flights and roughly 0.5% increase in cancelled flights in comparison to 2019.
+           Considering the increase in air travel demand and obstacles caused by staffing shortages, air travel in 2022 as of May has not changed as drastically as many believe.")
        
      
-     tags$img(src = "https://i.pinimg.com/originals/90/67/a7/9067a700ebb78f62a508c4139ddca004.jpg",
-           width = "75%", height = "75%"),
-       tags$p("")
      )
       ))
     )))
